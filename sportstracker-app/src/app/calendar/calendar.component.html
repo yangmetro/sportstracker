@@ -1,0 +1,14 @@
+<div class="cal" id="full-calendar"></div>
+<div *ngIf="eventClicked" class="games">
+    <h2 class="text">Games on {{gameDate}}:</h2>
+    <ng-container *ngFor="let team of hTeams; let i = index">
+        <div class="game">
+            <img class="logo" src="{{hLogos[i]}}">
+            <p class="text">{{hTeams[i]}}</p>
+        </div>
+        <div class="game">
+            <img class="logo" src="{{vLogos[i]}}">
+            <p class="text">{{vTeams[i]}}</p>
+        </div>
+    </ng-container>
+</div>

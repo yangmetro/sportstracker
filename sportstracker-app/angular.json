@@ -1,0 +1,197 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sportstracker-app": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sportstracker-app",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "src/favicon.ico",
+              "src/img"
+            ],
+            "styles": [
+              "src/css/animate.css",
+              "src/css/aos.css",
+              "src/css/bootstrap.min.css",
+              "src/css/font-awesome.min.css",
+              "src/css/magnific-popup.css",
+              "src/css/nice-select.css",
+              "src/css/owl.carousel.min.css",
+              "src/css/style.css",
+              "src/css/swiper.min.css",
+              "src/css/themify-icons.css",
+              "src/ej2/ej2-base/styles/materials.css",
+              "src/ej2/ej2-buttons/styles/materials.css",
+              "src/ej2/ej2-calendars/styles/materials.css",
+              "src/ej2/ej2-popups/styles/materials.css",
+              "./node_modules/fullcalendar/dist/fullcalendar.min.css"
+            ],
+            "scripts": [
+              "src/js/aos.js",
+              "src/js/bootstrap.min.js",
+              "src/js/contact.js",
+              "src/js/custom.js",
+              "src/js/gmaps.min.js",
+              "src/js/jquery-1.12.1.min.js",
+              "src/js/jquery-3.3.1.slim.min.js",
+              "src/js/jquery.ajaxchimp.min.js",
+              "src/js/jquery.easing.min.js",
+              "src/js/jquery.form.js",
+              "src/js/jquery.magnific-popup.js",
+              "src/js/jquery.nice-select.min.js",
+              "src/js/jquery.validate.min.js",
+              "src/js/mail-script.js",
+              "src/js/masonry.pkgd.js",
+              "src/js/masonry.pkgd.min.js",
+              "src/js/owl.carousel.min.js",
+              "src/js/particles.min.js",
+              "src/js/popper.min.js",
+              "src/js/slick.min.js",
+              "src/js/swiper_custom.js",
+              "src/js/swiper.min.js",
+              "src/app/sports-feed/sports-feed.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sportstracker-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sportstracker-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sportstracker-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/img"
+            ],
+            "styles": [
+              "src/css/animate.css",
+              "src/css/aos.css",
+              "src/css/bootstrap.min.css",
+              "src/css/font-awesome.min.css",
+              "src/css/magnific-popup.css",
+              "src/css/nice-select.css",
+              "src/css/owl.carousel.min.css",
+              "src/css/style.css",
+              "src/css/swiper.min.css",
+              "src/css/themify-icons.css",
+              "src/ej2/ej2-base/styles/materials.css",
+              "src/ej2/ej2-buttons/styles/materials.css",
+              "src/ej2/ej2-calendars/styles/materials.css",
+              "src/ej2/ej2-popups/styles/materials.css",
+              "src/app/fullcalendar/packages/core/main.css",
+              "src/app/fullcalendar/packages/daygrid/main.css"
+            ],
+            "scripts": [
+              "src/js/aos.js",
+              "src/js/bootstrap.min.js",
+              "src/js/contact.js",
+              "src/js/custom.js",
+              "src/js/gmaps.min.js",
+              "src/js/jquery-1.12.1.min.js",
+              "src/js/jquery-3.3.1.slim.min.js",
+              "src/js/jquery.ajaxchimp.min.js",
+              "src/js/jquery.easing.min.js",
+              "src/js/jquery.form.js",
+              "src/js/jquery.magnific-popup.js",
+              "src/js/jquery.nice-select.min.js",
+              "src/js/jquery.validate.min.js",
+              "src/js/mail-script.js",
+              "src/js/masonry.pkgd.js",
+              "src/js/masonry.pkgd.min.js",
+              "src/js/owl.carousel.min.js",
+              "src/js/particles.min.js",
+              "src/js/popper.min.js",
+              "src/js/slick.min.js",
+              "src/js/swiper_custom.js",
+              "src/js/swiper.min.js",
+              "src/app/sports-feed/sports-feed.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "sportstracker-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sportstracker-app:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "sportstracker-app"
+}
