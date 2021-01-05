@@ -1,3 +1,4 @@
 # SportTracker
-Displays calendar of sports event for a specific team. Project developed for LaunchPad at Purdue.
+Displays calendar of sports event for a specific team. Project developed for LaunchPad at Purdue using Angular.
+
 ![Screenshot](sportstracker.png)
