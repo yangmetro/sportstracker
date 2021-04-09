@@ -4,7 +4,7 @@ var req = unirest("GET", "https://api-nba-v1.p.rapidapi.com/seasons/");
 
 req.headers({
 	"x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
-	"x-rapidapi-key": "0f80d42940msh7e702f1daf041e7p185178jsn1c3c50fd85f3"
+	"x-rapidapi-key": ""
 });
 
 
